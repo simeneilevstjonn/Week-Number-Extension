@@ -18,7 +18,6 @@
           width: 256px;
           height: 256px;
           text-align: center;
-          font-size: 12pt;
         }
         #giga {
           font-size: 150pt;
@@ -30,13 +29,21 @@
           width: 64px;
           height: auto;
         }
+        #wnhdr {
+          font-size: 12pt;
+          position: fixed;
+          top: 16px;
+          left: auto;
+          right: auto;
+        }
     </style>
   </head>
   <body>
     <div id="main">
-        Week number:
-        <span id="giga">52</span>
+        <span id="wnhdr">Week number:</span>
+        <span id="giga"></span>
         <a href="https://www.feriecountdown.com"><img src="assets/fcd.png" id="fcdlogo"></a>
     </div>
+    <script src="popup.js"></script>
   </body>
 </html>
