@@ -13,11 +13,30 @@
             color: #ccc;
             font-family: "myriad-pro",sans-serif;
         }
+
+        #main {
+          width: 256px;
+          height: 256px;
+          text-align: center;
+          font-size: 12pt;
+        }
+        #giga {
+          font-size: 150pt;
+        }
+        #fcdlogo {
+          position: fixed;
+          bottom: 16px;
+          right: 16px;
+          width: 64px;
+          height: auto;
+        }
     </style>
   </head>
   <body>
-    <div style="width: 256px; height: 256px">
-        6
+    <div id="main">
+        Week number:
+        <span id="giga">52</span>
+        <a href="https://www.feriecountdown.com"><img src="assets/fcd.png" id="fcdlogo"></a>
     </div>
   </body>
 </html>
