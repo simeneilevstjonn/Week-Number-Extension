@@ -7,6 +7,13 @@ Week number extension is the handy tool that gives you the current week number i
 
 ## Installation
 
+### Firefox
+
+Navigate to https://addons.mozilla.org/en-US/firefox/addon/week-number-extension/, click "Add to Firefox", then click "Add" on the popup.
+
+
+### Chrome 
+
 The extension is currently not on the Chrome Web Store as I currently do not feel like paying $25 to put it there. You must install it manually.
 
 1. Download the "Chrome"-folder.
