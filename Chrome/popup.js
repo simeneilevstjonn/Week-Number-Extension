@@ -15,6 +15,7 @@ Date.prototype.getWeek = function() {
 
 document.getElementById("giga").innerHTML = new Date().getWeek();
 
+
 //Attach onclick events to navbar items
 document.getElementById("current").addEventListener("click", function() {document.getElementById("thiswk").style.display = "block";document.getElementById("conv").style.display = "none";document.getElementById("current").className = "nav-link active";document.getElementById("convert").className = "nav-link";});
 document.getElementById("convert").addEventListener("click", function() {document.getElementById("thiswk").style.display = "none";document.getElementById("conv").style.display = "block";document.getElementById("current").className = "nav-link";document.getElementById("convert").className = "nav-link active";});
