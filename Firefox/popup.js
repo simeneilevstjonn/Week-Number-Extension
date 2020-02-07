@@ -13,7 +13,7 @@ Date.prototype.getWeek = function() {
                             - 3 + (week1.getDay() + 6) % 7) / 7);
 }
 
-document.getElementById("giga").innerHTML = new Date().getWeek();
+document.getElementById("giga").textContent = new Date().getWeek();
 
 
 //Attach onclick events to navbar items
@@ -54,6 +54,6 @@ function runConvert() {
     var weekx = weekStartDate(selweek);
 
     //Print results
-    document.getElementById("startdate").innerHTML = "Monday " + weekx.toLocaleDateString();
-    document.getElementById("enddate").innerHTML = "Sunday " + new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString();
+    document.getElementById("startdate").textContent = "Monday " + weekx.toLocaleDateString();
+    document.getElementById("enddate").textContent = "Sunday " + new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString();
 }
