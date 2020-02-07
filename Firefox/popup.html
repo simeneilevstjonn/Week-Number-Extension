@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-        @font-face {
-            font-family:"myriad-pro";
-            src:url("assets/myriadpro.woff2") format("woff2"),url("assets/myriadpro.woff") format("woff"),url("assets/myriadpro.ot") format("opentype");
-            font-display:auto;font-style:normal;font-weight:400;
-        }
-
-        body {
-            background-color: #333;
-            color: #ccc;
-            font-family: "myriad-pro",sans-serif;
-        }
-
-        #main {
-          width: 256px;
-          height: 256px;
-          text-align: center;
-        }
-        #giga {
-          font-size: 150pt;
-        }
-        #fcdlogo {
-          position: fixed;
-          bottom: 16px;
-          right: 16px;
-          width: 64px;
-          height: auto;
-        }
-        #wnhdr {
-          font-size: 12pt;
-          position: fixed;
-          top: 16px;
-          left: auto;
-          right: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="popup.css">
   </head>
   <body>
     <div id="main">
+      <div id="navbar">
+        <ul id="navbar-list">
+          <li class="nav-link active" id="current">
+            Current
+          </li>
+          <li class="nav-link" id="convert">
+            Convert
+          </li>
+        </ul>
+      </div>
+      <div id="thiswk" class="maincontent">
         <span id="wnhdr">Week number:</span>
         <span id="giga"></span>
-        <img src="assets/fcd.png" id="fcdlogo">
+      </div>
+      <div id="conv" class="maincontent">
+        <div>
+          <label for="weeknum">Week number</label>
+          <input class="form-control" id="weeknum" type="number" min="1" max="53">
+        </div>
+        <div class="std-size">
+          <p>
+            Start date:<br>
+            <span id="startdate"></span>
+          </p>
+          <p>
+            End date:<br>
+            <span id="enddate"></span>
+          </p>
+        </div>
+      </div>
     </div>
     <script src="popup.js"></script>
   </body>
