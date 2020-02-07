@@ -7,23 +7,20 @@
             src:url("assets/myriadpro.woff2") format("woff2"),url("assets/myriadpro.woff") format("woff"),url("assets/myriadpro.ot") format("opentype");
             font-display:auto;font-style:normal;font-weight:400;
         }
-
         body {
-            background-color: #333;
-            color: #ccc;
-            font-family: "myriad-pro",sans-serif;
+          background-color: #333;
+          color: #ccc;
+          font-family: "myriad-pro",sans-serif!important;
         }
-
         #main {
           width: 256px;
-          height: 256px;
+          height: 280px;
           text-align: center;
         }
         #giga {
           font-size: 150pt;
         }
         #wnhdr {
-          font-size: 12pt;
           position: fixed;
           top: 48px;
           left: auto;
@@ -49,8 +46,6 @@
           text-decoration: none;
           list-style: none;
           font-size: 12pt;
-          color: #ccc;
-          background-color: #333;
           padding: 3px;
           border-radius: .25rem;
         }
@@ -62,6 +57,11 @@
           height: 208px;
           bottom: 0;
           width: 256px;
+          font-size: 12pt;
+        }
+        #conv {
+          padding-top: 8px;
+          display: none;
         }
     </style>
   </head>
@@ -69,10 +69,10 @@
     <div id="main">
       <div id="navbar">
         <ul id="navbar-list">
-          <li class="nav-link active">
+          <li class="nav-link active" id="current">
             Current
           </li>
-          <li class="nav-link">
+          <li class="nav-link" id="convert">
             Convert
           </li>
         </ul>
@@ -80,6 +80,9 @@
       <div id="thiswk" class="maincontent">
         <span id="wnhdr">Week number:</span>
         <span id="giga"></span>
+      </div>
+      <div id="conv" class="maincontent">
+        <span>Hello, World!</span>
       </div>
     </div>
     <script src="popup.js"></script>
