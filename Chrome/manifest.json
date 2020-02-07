@@ -1,7 +1,7 @@
 {
    "name": "Week number extension",
-   "version": "1.0.0",
-   "description": "Do you find people who just have to use week numbers annoying? Week number extension by FerieCountdown is your tool for understanding their language.",
+   "version": "1.1.0",
+   "description": "Do you find people who just have to use week numbers annoying? Week number extension is your tool for understanding their language.",
    "browser_action": {
      "default_popup": "popup.html",
      "default_icon": {
