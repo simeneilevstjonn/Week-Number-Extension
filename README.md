@@ -14,13 +14,6 @@ Navigate to https://addons.mozilla.org/en-US/firefox/addon/week-number-extension
 
 ### Chrome 
 
-The extension is currently not on the Chrome Web Store as I currently do not feel like paying $25 to put it there. You must install it manually.
-
-1. Download the "Chrome"-folder.
-2. Open chrome and go to "chrome://extensions".
-3. Enable developer mode using the switch in the top right corner.
-4. Click the "load unpacked"-button
-5. Select the "Chrome"-folder and click "Select folder"
-5. You are ready to go!
+Navigate to https://chrome.google.com/webstore/detail/fclcmbgakeahonjplbpinljmghfgnfog, click "Add to Chrome", then click "Add extension" on the popup.
 
 &copy; Simen Eilevstjønn 2020 - MIT Liscense
