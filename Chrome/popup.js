@@ -54,6 +54,6 @@ function runConvert() {
     var weekx = weekStartDate(selweek);
 
     //Print results
-    document.getElementById("startdate").textContent = "Monday " + weekx.toLocaleDateString();
-    document.getElementById("enddate").textContent = "Sunday " + new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString();
+    document.getElementById("startdate").textContent = weekx.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById("enddate").textContent = new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
