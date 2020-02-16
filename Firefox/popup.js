@@ -24,9 +24,26 @@ document.getElementById("convert").addEventListener("click", function() {
     document.getElementById("current").className = "nav-link";
     document.getElementById("convert").className = "nav-link active";
     document.getElementById("weeknum").value = new Date().getWeek();
+    document.getElementById("date").value = new Date().toISOString().substr(0, 10);
     runConvert();
     document.getElementById("weeknum").addEventListener("change", runConvert);
+    document.getElementById("tfsel").addEventListener("change", swapMode);
+    document.getElementById("date").addEventListener("change", toConvert);
 });
+
+function swapMode() {
+    switch (document.getElementById("tfsel").value) {
+        case "from":
+            document.getElementById("towk").style.display = "none";
+            document.getElementById("fromwk").style.display = "block";
+            break;
+        case "to":
+            document.getElementById("towk").style.display = "block";
+            document.getElementById("fromwk").style.display = "none";
+            toConvert();
+            break;
+    }
+}
 
 function weekStartDate(weeknum) {
     var date = new Date();
@@ -56,4 +73,8 @@ function runConvert() {
     //Print results
     document.getElementById("startdate").textContent = weekx.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     document.getElementById("enddate").textContent = new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function toConvert() {
+    document.getElementById("convweek").textContent = new Date(document.getElementById("date").value).getWeek();
 }

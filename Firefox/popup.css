@@ -7,6 +7,7 @@ body {
   background-color: #333;
   color: #ccc;
   font-family: "myriad-pro",sans-serif!important;
+  overflow: hidden;
 }
 #main {
   width: 256px;
@@ -75,6 +76,20 @@ body {
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+.form-control.norm {
+  height: calc(1.5em + .75rem + 2px)!important;
+  width: 100%
+}
 .std-size, label {
   font-size: 12pt;
-}   
+}
+.my-8px {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+#towk {
+  display: none;
+}
+.big-text {
+  font-size: 64pt;
+}      

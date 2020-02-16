@@ -21,18 +21,38 @@
       </div>
       <div id="conv" class="maincontent">
         <div>
-          <label for="weeknum">Week number</label>
-          <input class="form-control" id="weeknum" type="number" min="1" max="53">
+          <select id="tfsel" class="form-control norm my-8px">
+            <option value="from" selected>To dates from week</option>
+            <option value="to">To week from date</option>
+          </select>
         </div>
-        <div class="std-size">
-          <p>
-            Start date:<br>
-            <span id="startdate"></span>
-          </p>
-          <p>
-            End date:<br>
-            <span id="enddate"></span>
-          </p>
+        <div id="fromwk">
+          <div>
+            <label for="weeknum">Week number</label>
+            <input class="form-control" id="weeknum" type="number" min="1" max="53">
+          </div>
+          <div class="std-size">
+            <p>
+              Start date:<br>
+              <span id="startdate"></span>
+            </p>
+            <p>
+              End date:<br>
+              <span id="enddate"></span>
+            </p>
+          </div>
+        </div>
+        <div id="towk">
+          <div>
+            <label for="date">Date</label>
+            <input class="form-control" id="date" type="date">
+          </div>
+          <div class="std-size">
+            <p>
+              Week number:<br>
+              <span id="convweek" class="big-text"></span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
