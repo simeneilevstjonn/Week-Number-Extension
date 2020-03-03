@@ -1,6 +1,6 @@
 {
    "name": "Week number extension",
-   "version": "1.2.0",
+   "version": "1.2.1",
    "description": "Do you find people who just have to use week numbers annoying? Week number extension is your tool for understanding their language.",
    "browser_action": {
      "default_popup": "popup.html",
