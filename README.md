@@ -1,6 +1,6 @@
 # Week Number Extension
 
-Do you find people who just have to use week numbers annoying? Week number extension by FerieCountdown is your tool for understanding their language.
+Do you find people who just have to use week numbers annoying? Week number extension is your tool for understanding their language.
 
 Week number extension is the handy tool that gives you the current week number in an instant!
 
