@@ -7,7 +7,6 @@ body {
   background-color: #333;
   color: #ccc;
   font-family: "myriad-pro",sans-serif!important;
-  overflow: hidden;
 }
 #main {
   width: 256px;
@@ -20,8 +19,11 @@ body {
 #wnhdr {
   position: fixed;
   top: 48px;
-  left: auto;
-  right: auto;
+  /*left: auto;
+  right: auto;*/
+  left: 0;
+  width: 100%;
+  text-align: center;
   font-size: 12pt;
 }
 #navbar-list {
