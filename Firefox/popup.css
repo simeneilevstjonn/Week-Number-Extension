@@ -12,6 +12,7 @@ body {
   width: 256px;
   height: 280px;
   text-align: center;
+  overflow: hidden;
 }
 #giga {
   font-size: 150pt;
