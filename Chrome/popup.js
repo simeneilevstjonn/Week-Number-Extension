@@ -76,5 +76,15 @@ function runConvert() {
 }
 
 function toConvert() {
-    document.getElementById("convweek").textContent = new Date(document.getElementById("date").value).getWeek();
+    document.getElementById("convweek").textContent = (isNaN(new Date(document.getElementById("date").value).getWeek())) ? invalidDate() : validDate();
+}
+
+function invalidDate() {
+    document.getElementById("convweek").style.fontSize = "24pt";
+    return "Invalid date";
+}
+
+function validDate() {
+    document.getElementById("convweek").style.fontSize = "";
+    return new Date(document.getElementById("date").value).getWeek();
 }
