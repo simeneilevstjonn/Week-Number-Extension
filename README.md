@@ -4,6 +4,8 @@ Do you find people who just have to use week numbers annoying? Week number exten
 
 Week number extension is the handy tool that gives you the current week number in an instant!
 
+It also allows you to convert week numbers to dates and vica versa.
+
 
 ## Installation
 
