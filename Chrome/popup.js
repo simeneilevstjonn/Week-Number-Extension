@@ -76,7 +76,7 @@ function runConvert() {
 }
 
 function toConvert() {
-    document.getElementById("convweek").textContent = (isNaN(new Date(document.getElementById("date").value).getWeek())) ? invalidDate() : validDate();
+    document.getElementById("convweek").textContent = (isNaN(new Date(document.getElementById("date").value).getWeek()) || new Date(document.getElementById("date").value).getWeek() < 0) ? invalidDate() : validDate();
 }
 
 function invalidDate() {
