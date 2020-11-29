@@ -27,9 +27,15 @@
           </select>
         </div>
         <div id="fromwk">
-          <div>
-            <label for="weeknum">Week number</label>
-            <input class="form-control" id="weeknum" type="number" min="1" max="53">
+          <div class="form-row">
+            <div class="form-group col-5 pr-10px">
+              <label for="weeknum">Week number</label>
+              <input class="form-control" id="weeknum" type="number" min="1" max="53">
+            </div>
+            <div class="form-group col-5 pl-10px">
+              <label for="weeknum">Year</label>
+              <input class="form-control" id="yearinpt" type="number" min="1000" max="3000">
+            </div>
           </div>
           <div class="std-size">
             <p>
@@ -45,7 +51,7 @@
         <div id="towk">
           <div>
             <label for="date">Date</label>
-            <input class="form-control" id="date" type="date">
+            <input class="form-control" id="date" type="date" min="1000-01-01" max="2999-12-31">
           </div>
           <div class="std-size">
             <p>
