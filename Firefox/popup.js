@@ -27,10 +27,14 @@ document.getElementById("convert").addEventListener("click", function() {
     document.getElementById("yearinpt").value = new Date().getFullYear();
     document.getElementById("date").value = new Date().toISOString().substr(0, 10);
     runConvert();
-    document.getElementById("weeknum").addEventListener("change", runConvert);
-    document.getElementById("tfsel").addEventListener("change", swapMode);
-    document.getElementById("date").addEventListener("change", toConvert);
 });
+
+// Attach other event listeners
+document.getElementById("weeknum").addEventListener("change", runConvert);
+document.getElementById("yearinpt").addEventListener("change", runConvert);
+document.getElementById("tfsel").addEventListener("change", swapMode);
+document.getElementById("date").addEventListener("change", toConvert);
+
 
 function swapMode() {
     switch (document.getElementById("tfsel").value) {
@@ -46,12 +50,12 @@ function swapMode() {
     }
 }
 
-function weekStartDate(weeknum) {
+function weekStartDate(weeknum, year) {
     var date = new Date();
     date.setHours(0, 0, 0, 0);
 
     //Generate an object for week 1
-    var week1 = new Date(date.getFullYear(), 0, 4);
+    var week1 = new Date(year, 0, 4);
 
     //Find first day of week 1
     var j4d = week1.getDay();
@@ -63,15 +67,29 @@ function weekStartDate(weeknum) {
 }
 
 function runConvert() {
-    //Grab input and run conversion
-    var selweek = document.getElementById("weeknum").value;
+    // Get week input
+    let selweek = document.getElementById("weeknum").value;
     if (selweek > 53) {
         selweek = 53;
         document.getElementById("weeknum").value = 53;
     }
-    var weekx = weekStartDate(selweek);
 
-    //Print results
+    // Get year input
+    let selyear = document.getElementById("yearinpt").value;
+    // Validate
+    if (selyear < 1000) {
+        selyear = 1000;
+        document.getElementById("yearinpt").value = 1000;
+    }
+    else if (selyear > 3000) {
+        selyear = 3000;
+        document.getElementById("yearinpt").value = 3000;
+    }
+
+    // Run conversion
+    let weekx = weekStartDate(selweek, selyear);
+
+    // Print results
     document.getElementById("startdate").textContent = weekx.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     document.getElementById("enddate").textContent = new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
