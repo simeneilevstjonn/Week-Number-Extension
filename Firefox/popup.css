@@ -90,9 +90,38 @@ body {
   margin-bottom: 8px;
   margin-top: 8px;
 }
+.pr-10px {
+  padding-right: 10px!important;
+}
+.pl-10px {
+  padding-left: 10px!important;
+}
 #towk {
   display: none;
 }
 .big-text {
   font-size: 64pt;
-}      
+}
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.col-5 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}

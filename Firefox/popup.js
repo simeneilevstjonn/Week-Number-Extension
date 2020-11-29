@@ -24,6 +24,7 @@ document.getElementById("convert").addEventListener("click", function() {
     document.getElementById("current").className = "nav-link";
     document.getElementById("convert").className = "nav-link active";
     document.getElementById("weeknum").value = new Date().getWeek();
+    document.getElementById("yearinpt").value = new Date().getFullYear();
     document.getElementById("date").value = new Date().toISOString().substr(0, 10);
     runConvert();
     document.getElementById("weeknum").addEventListener("change", runConvert);
