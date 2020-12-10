@@ -89,7 +89,16 @@ function runConvert() {
     // Run conversion
     let weekx = weekStartDate(selweek, selyear);
 
+    // Check if year has 53 weeks
+    if (selweek == 53) {
+        if (new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).getDate() > 4) {
+            return no53();
+        }
+    }
+
     // Print results
+    document.getElementById("toconvresult").style.display = "block";
+    document.getElementById("toconverror").style.display = "none";
     document.getElementById("startdate").textContent = weekx.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     document.getElementById("enddate").textContent = new Date(weekx.getTime() + 6 * 24 * 60 * 60 * 1000).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 }
@@ -106,4 +115,9 @@ function invalidDate() {
 function validDate() {
     document.getElementById("convweek").style.fontSize = "";
     return new Date(document.getElementById("date").value).getWeek();
+}
+
+function no53() {
+    document.getElementById("toconvresult").style.display = "none";
+    document.getElementById("toconverror").style.display = "block";
 }
