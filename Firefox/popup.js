@@ -24,7 +24,7 @@ document.getElementById("convert").addEventListener("click", function() {
     document.getElementById("current").className = "nav-link";
     document.getElementById("convert").className = "nav-link active";
     document.getElementById("weeknum").value = new Date().getWeek();
-    document.getElementById("yearinpt").value = new Date().getFullYear();
+    document.getElementById("yearinpt").value = new Date().getWeek() == 53 && new Date().getMonth() == 0 ? new Date().getFullYear() - 1 : new Date().getWeek() == 1 && new Date().getMonth() == 11 ? new Date().getFullYear() + 1 : new Date().getFullYear();
     document.getElementById("date").value = new Date().toISOString().substr(0, 10);
     runConvert();
 });
